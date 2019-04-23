@@ -80,7 +80,7 @@
     NSMutableArray *confettiObjects = [NSMutableArray array];
     
     __weak L360ConfettiArea *weakSelf = self;
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+    dispatch_async(dispatch_get_main_queue(), ^(void){
         for (NSInteger i = 0; i < numberConfetti; i++) {
             CGFloat randomWidth = confettiWidth + [weakSelf randomFloatBetween:-(confettiWidth / 2.0) and:2.0];
             CGRect confettiFrame = CGRectMake(point.x,
@@ -128,7 +128,7 @@
     NSMutableArray *confettiObjects = [NSMutableArray array];
     
     __weak L360ConfettiArea *weakSelf = self;
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+    dispatch_async(dispatch_get_main_queue(), ^(void){
         for (NSInteger i = 0; i < numberConfetti; i++) {
             CGFloat randomWidth = confettiWidth + [weakSelf randomFloatBetween:-(confettiWidth / 2.0) and:2.0];
             CGRect confettiFrame = CGRectMake(point.x,
@@ -183,7 +183,7 @@
     NSMutableArray *confettiObjects = [NSMutableArray array];
 
     __weak L360ConfettiArea *weakSelf = self;
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+    dispatch_async(dispatch_get_main_queue(), ^(void){
         for (NSInteger i = 0; i < numberConfetti; i++) {
 
             NSObject *confetti = [[(Class)confettiClass alloc] initWithStartingPoint:point
